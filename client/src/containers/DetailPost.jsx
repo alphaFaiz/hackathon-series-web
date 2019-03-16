@@ -70,7 +70,7 @@ class DetailPost extends Component {
                     <hr/>                    
                     <div dangerouslySetInnerHTML={{__html: this.state.post.description}}></div>
                     <hr/>                    
-                    <p><b>Platforms: </b>{this.state.post.platform}</p>
+                    <p><b>Platform: </b>{this.state.post.platform}</p>
                     <hr/>                    
                     <p><b>Release date:</b> {releaseDateString}</p>
                 </div>

@@ -57,7 +57,7 @@ authRouter.post('/login', async (req, res) => {
         } else {
             res.status(404).json({
                 success: false,
-                message: 'not found'
+                message: 'Username not found'
             });
         }
     } catch (error) {

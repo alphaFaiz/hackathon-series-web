@@ -23,7 +23,7 @@ postRouter.put('/:postId', async (req,res) => {
             title, 
             description, 
             ratingCategory, 
-            contentDesciptors, 
+            contentDescriptors, 
             platform, 
             releaseDate} = req.body;
         const {postId} = req.params;
@@ -32,11 +32,11 @@ postRouter.put('/:postId', async (req,res) => {
         await postModel.findByIdAndUpdate(postId, {title}).exec();
         await postModel.findByIdAndUpdate(postId, {description}).exec();
         await postModel.findByIdAndUpdate(postId, {ratingCategory}).exec();
-        await postModel.findByIdAndUpdate(postId, {contentDesciptors}).exec();
+        await postModel.findByIdAndUpdate(postId, {contentDescriptors}).exec();
         await postModel.findByIdAndUpdate(postId, {platform}).exec();
         await postModel.findByIdAndUpdate(postId, {releaseDate}).exec();
         res.status(201).json({
-         message: 'post updated!',
+         message: 'Post is updated!',
         });
     } catch (error) {
         console.log(error)
@@ -78,12 +78,14 @@ postRouter.post('/', async (req, res) => {
         await newPost.save();
         
         res.status(201).json({
-         message: 'post created!',
+         message: 'Post is created!',
          id: newPost._id,
         });       
-        
+        // console.log(newPost);
     } catch (error) {
+        console.log(error);
         res.status(error.status || 500).end(error.message || 'Internal server error');
+        
     }
 });
 

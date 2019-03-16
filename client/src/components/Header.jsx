@@ -6,11 +6,12 @@ import UploadModal from './UploadModal';
 export const Header = (props) => {
     // console.log(props.authAdmin.role)
     return(
-        <Navbar color='light'>
+        <Navbar color='danger'>
             <Container className='header-container'>
-                <Link to = {`/posts/`}>
-                <Input onChange = {(e) => props.changeKeyword(e.target.value)} style={{display: 'inline-block',}} className='search' type='text' name='search-title' placeholder='search game'/>
+                <Link to={`/posts/`}>
+                <Input onChange = {(e) => props.changeKeyword(e.target.value)} style={{display: 'inline-block'}} className='search' type='text' name='search-title' placeholder='Search game'/>
                 </Link>
+                
                 <NavbarBrand className='col-sm-4' href="/"><img className='img-fluid' src='https://upload.wikimedia.org/wikipedia/commons/1/13/Persona_PSP_logo.svg' alt=''/></NavbarBrand>
                 {props.authAdmin.id ? (
                     <div className = 'col-sm-4'>
@@ -20,12 +21,12 @@ export const Header = (props) => {
                     <div className='buttons'>
                     {props.authAdmin.role==='admin' && (
                         <Button className='col-6' color='success' onClick =  {props.uploadPost.toggle}>Create post</Button>)}
-                        <Button className='col-6' color='danger' onClick = {props.logOut}>Log out</Button>
+                        <Button className='col-6' color='primary' onClick = {props.logOut}>Log out</Button>
                     </div>
                     </div>
                 ):(
                     <div>
-                    <Button onClick={props.login.loginWithFacebook}>Login with Facebook</Button>
+                    <Button onClick={props.login.loginWithFacebook} color='success'>Login with Facebook</Button>
                     <Button style={{marginRight: '10px'}} color='primary' onClick={props.login.toggle}>Login</Button>
                     </div>
                 )}
@@ -47,7 +48,7 @@ export const Header = (props) => {
                                 onChange={(e) => {props.login.loginInfoChange({password: e.target.value})}}
                             />
 
-                            <Button onClick={props.login.submitForm }>Log In</Button>
+                            <Button onClick={props.login.submitForm }>Login</Button>
                         </Form>
                     </ModalBody> 
                 </Modal>

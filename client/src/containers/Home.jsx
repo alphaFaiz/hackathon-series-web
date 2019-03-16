@@ -25,7 +25,7 @@ const Home = (props) => {
                 <img className='img-fluid mt-2' style={{width:'60%',height:'45vh', position:'center', verticalAlign:'center'}}
                  src = {props.post.cover} alt ='not found' />
                 <hr/>                    
-                <p><b>Platforms: </b>{props.post.platform}</p>
+                <p><b>Platform: </b>{props.post.platform}</p>
                 {/* <hr/>                    
                 <img className='img-fluid' src={props.post.ratingCategory} style={{height:'20%', width:'25%'}} alt=''/>
                 <hr/>                     */}

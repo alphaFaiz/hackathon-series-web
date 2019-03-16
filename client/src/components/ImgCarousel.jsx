@@ -9,28 +9,52 @@ import {
 
 const items = [
   {
+    src: 'https://i.ytimg.com/vi/KPekwF1O4Qs/maxresdefault.jpg',
+  },
+  {
+    src: 'https://i.imgur.com/hjwjfWb.jpg',
+  },
+  {
+    src: 'https://personacentral.com/wp-content/uploads/2018/03/Shin-Megami-Tensei-if...-Original-Sound-Collection.jpg',
+  },
+  {
+    src: 'https://www.legendra.com/media/wallpapers/xbox/shin_megami_tensei_nine/wall_2.jpg',
+  },
+  {
+    src: 'https://i0.wp.com/i.ytimg.com/vi/PZZA-ElsORk/maxresdefault.jpg?w=600',
+  },
+  {
+    src: 'https://i.ytimg.com/vi/wqXlkXeiy5k/maxresdefault.jpg',
+  },
+  {
+    src: 'https://product.hstatic.net/1000190106/product/81rpp0by5fl._ac_sl1471_.jpg',
+  },
+  {
+    src: 'https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_3ds_download_software_7/SI_3DSDS_ShinMegamiTenseiIV_image1600w.jpg',
+  },
+  {
+    src: 'https://www.nintenderos.com/wp-content/uploads/2016/11/Shin-Megami-Tensei-IV-Apocalypse.jpg',
+  },
+  {
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTpgCjcw_WcSAHlQSZaeKCNhQgXDePIwzOIJ3bd1WbX4u1JQF',
+  },
+  {
+    src: 'https://www.hellocosplay.com/media/product/1eb/revelations-persona-cosplay-yukino-uniform-7cf.jpg',
+  },
+  {
+    src: 'https://images.launchbox-app.com/50b4d351-6cbc-49f9-83b0-fff8ed63ec0e.jpg',
+  },
+  {
+    src: 'https://vignette.wikia.nocookie.net/megamitensei/images/4/4d/Persona_2_characters.png/revision/latest?cb=20161017160710',
+  },
+  {
+    src: 'https://2.bp.blogspot.com/-VlLgI_IqKKw/WcTl9a0773I/AAAAAAAAAOE/rErNwe8I5FwpvzIFvjV-Xma94AsSTrAoACLcBGAs/s640/persona3style%25281%2529.jpg',
+  },
+  {
+    src: 'https://cdn.wccftech.com/wp-content/uploads/2018/05/Persona-4-New-Game.jpg',
+  },
+  {
     src: 'http://cdn2.game4v.com/2017/04/persona5.jpg',
-  },
-  {
-    src: 'https://i.ytimg.com/vi/hMphCrAk50U/maxresdefault.jpg',
-  },
-  {
-    src: 'https://i1.wp.com/i.imgur.com/LeyzAxw.jpg?w=1170&ssl=1',
-  },
-  {
-    src: 'https://i.ytimg.com/vi/ZPsLCVh30Ds/maxresdefault.jpg',
-  },
-  {
-    src: 'https://pm1.narvii.com/6637/b446a305e549a898dcd1a088fcde142f09d38205_hq.jpg',
-  },
-  {
-    src: 'https://c-5uwzmx78pmca09x24quoqfx2ezivsmzx2ekwu.g00.ranker.com/g00/3_c-5eee.zivsmz.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fquoqf.zivsmz.kwux2fcamz_vwlm_quox2f38816x2f9888522014x2fwzqoqvitx2faequuqvo-twoqk-x78pwbw-c9x3fex3d438x26yx3d48x26nux3dx78rx78ox26nqbx3dkzwx78x26kzwx78x3dnikmax22x26q98k.uizsx3dquiom_$/$/$/$/$/$',
-  },
-  {
-    src: 'https://c-5uwzmx78pmca09x24quoqfx2ezivsmzx2ekwu.g00.ranker.com/g00/3_c-5eee.zivsmz.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fquoqf.zivsmz.kwux2fcamz_vwlm_quox2f38815x2f9888508552x2fwzqoqvitx2fow-ieig-aiv-ivlzmia-x78pwbw-c9x3fex3d438x26yx3d38x26nux3dx78rx78ox26nqbx3dkzwx78x26kzwx78x3dnikmax26q98k.uizsx3dquiom_$/$/$/$/$/$',
-  },
-  {
-    src: 'https://i.imgflip.com/pb6ka.jpg',
   },
 ];
 
@@ -80,7 +104,7 @@ class ImgCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt='' style={{width:'100%', position:'center', height:'60vh' }} className='img-fluid' />
+          <img src={item.src} alt='' style={{width:'100%', position:'center', height:'100vh' }} className='img-fluid' />
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );

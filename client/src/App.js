@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Header} from './components/Header'; 
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import { BrowserRouter, Route } from 'react-router-dom';
 import About from './containers/About';
@@ -84,7 +84,7 @@ class App extends Component {
   loginSubmit = async() => {
     //validate form
     if(!this.state.loginInfo.name || !this.state.loginInfo.password) {
-      window.alert('Please enter your username and password');
+      window.alert('Please enter your username and password!');
     }
     //fetch api to server
     else {

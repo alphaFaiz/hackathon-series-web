@@ -5,19 +5,19 @@ import Editor from './Editor';
 class UploadPostForm extends Component {
     state = {
         title: '',
+        cover: undefined,
         description: '',
-        cover: '',
         trailer: '',
         platform: '',
         ratingCategory: '',
-        contentDesciptors: '',
+        contentDescriptors: '',
         releaseDate: '',
     }
 
     createPost = async() =>{
             const postInfo = this.state;
             try {
-                const result = await fetch(`http://localhost:3001/api/posts/`, {
+                const result = await fetch(`http://localhost:3001/api/posts`, {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json'
@@ -60,7 +60,6 @@ class UploadPostForm extends Component {
                     <Input 
                         type='text' 
                         placeholder='Link for cover' 
-                        value={this.state.cover}
                         onChange={(e) => {this.setState({cover: e.target.value})}}
                     />
                     <h6>Link for embed video trailer:</h6>
@@ -88,8 +87,8 @@ class UploadPostForm extends Component {
                     <Input 
                         type='text' 
                         placeholder='Content descriptors' 
-                        value={this.state.contentDesciptors}
-                        onChange={(e) => {this.setState({contentDesciptors : e.target.value})}}
+                        value={this.state.contentDescriptors}
+                        onChange={(e) => {this.setState({contentDescriptors : e.target.value})}}
                     />
                     <h6>Release date:</h6>
                     <Input 

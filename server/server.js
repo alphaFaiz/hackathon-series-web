@@ -12,13 +12,7 @@ const startUp = async() => {
     try {
         const app = express();
 
-        // await mongoose.connect('mongodb://localhost:27017/games-series');
-        const dbRoute = 'mongodb://megawiki:aptx4869@ds125945.mlab.com:25945/megawiki';
-
-        await mongoose.connect(dbRoute, { useNewUrlParser: true });
-        let db = mongoose.connection;
-        db.once("open", () => console.log("Connected to the database"));
-        db.on("error", console.error.bind(console, "MongoDB connection error:"));
+        await mongoose.connect('mongodb://megawiki:aptx4869@ds125945.mlab.com:25945/megawiki');
         
         const admin = require("firebase-admin");
 
@@ -48,7 +42,7 @@ const startUp = async() => {
         await app.listen(process.env.PORT || 3001);
         console.log(`server listens on port ${process.env.PORT || 3001}...`)
     } catch (error) {
-        console.log('Error happens: ',error);
+        console.log('Error happens: ', error);
     }
 }
 

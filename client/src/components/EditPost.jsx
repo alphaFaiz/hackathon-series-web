@@ -50,31 +50,31 @@ class EditPost extends Component {
                     <h6>Description:</h6>
                     <Editor  value={this.props.post.description} saveEditorContent={this.saveEditorContent}/>
                     <hr/>
-                    <h6>Link for cover image:</h6>
+                    <h6>Link of cover image:</h6>
                     <Input 
                         type='text' 
-                        placeholder='Link for cover' 
+                        placeholder='Link image' 
                         defaultValue={this.props.post.cover}
                         onChange={(e) => {this.setState({cover: e.target.value})}}
                     />
-                    <h6>Link for embed video trailer:</h6>
+                    <h6>Link of embed video trailer:</h6>
                     <Input 
                         type='text' 
-                        placeholder='Link for embed trailer' 
+                        placeholder='Link video' 
                         defaultValue={this.props.post.trailer}
                         onChange={(e) => {this.setState({trailer: e.target.value})}}
                     />
                     <h6>Platforms:</h6>
                     <Input 
                         type='text' 
-                        placeholder='platform' 
+                        placeholder='Platform' 
                         defaultValue={this.props.post.platform}
                         onChange={(e) => {this.setState({platform: e.target.value})}}
                     />
                     <h6>Rating category image:</h6>
                     <Input 
                         type='text' 
-                        placeholder='link for image of Rating Category' 
+                        placeholder='Link image' 
                         defaultValue={this.props.post.ratingCategory}
                         onChange={(e) => {this.setState({ratingCategory : e.target.value})}}
                     />
@@ -82,8 +82,8 @@ class EditPost extends Component {
                     <Input 
                         type='text' 
                         placeholder='Content descriptors' 
-                        defaultValue={this.props.post.contentDesciptors}
-                        onChange={(e) => {this.setState({contentDesciptors : e.target.value})}}
+                        defaultValue={this.props.post.contentDescriptors}
+                        onChange={(e) => {this.setState({contentDescriptors: e.target.value})}}
                     />
                     <h6>Release date:</h6>
                     <Input 
